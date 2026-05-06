@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Types - ApexTradePro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="Apex logo.png" alt="ApexTradePro" class="logo-img">
+                </a>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <div class="nav-menu" id="navMenu">
+                    <div class="nav-item dropdown">
+                        <span>Markets</span>
+                        <div class="dropdown-menu dropdown-horizontal">
+                            <a href="forex-cfd.html" class="dropdown-item">Forex CFD</a>
+                            <a href="crypto-cfd.html" class="dropdown-item">Crypto CFD</a>
+                            <a href="indices-cfd.html" class="dropdown-item">Indices CFD</a>
+                            <a href="commodities-cfd.html" class="dropdown-item">Commodities CFD</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <span>Trading</span>
+                        <div class="dropdown-menu">
+                            <a href="accounts.html" class="dropdown-item">Accounts</a>
+                            <a href="#" class="dropdown-item">Deposits and withdrawals</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="platforms.html" style="color: inherit; text-decoration: none;">
+                            <span>Platforms</span>
+                        </a>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <span>Tools</span>
+                        <div class="dropdown-menu">
+                            <a href="economic-calendar.html" class="dropdown-item">Economic Calendar</a>
+                            <a href="margin-calculator.html" class="dropdown-item">Margin Calculator</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <span>Project</span>
+                        <div class="dropdown-menu">
+                            <a href="about-us.html" class="dropdown-item">About us</a>
+                            <a href="contact-us.html" class="dropdown-item">Contact us</a>
+                            <a href="#" class="dropdown-item">Blog</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="partners.html" style="text-decoration: none; color: inherit;"><span>Partners</span></a>
+                    </div>
+                    
+                    <div class="nav-actions">
+                        <button class="btn-signin">Sign in</button>
+                        <button class="btn-register">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Accounts Hero Section -->
+    <section class="accounts-hero">
+        <div class="container">
+            <h1 class="accounts-hero-title">Account Types</h1>
+            <p class="accounts-hero-subtitle">A package crafted for both new and seasoned traders.<br>Discover exclusive offerings tailored to enhance your trading experience at<br>any skill level—unlock the ideal package and trade with confidence.</p>
+        </div>
+    </section>
+
+    <!-- Account Cards Section -->
+    <section class="account-cards-section">
+        <div class="container">
+            <div class="section-header-centered">
+                <span class="section-tag blue">Access</span>
+                <h2 class="section-title">ApexTradePro's Markets<br><span class="highlight-blue">Trading Account Types</span></h2>
+                <p class="section-subtitle">Sign up now to enjoy the benefits of our most popular account,<br>designed to enhance your trading experience.</p>
+            </div>
+            
+            <div class="account-cards-grid">
+                <!-- Standard Account -->
+                <div class="account-card">
+                    <div class="account-card-header">
+                        <div class="account-badge">
+                            <img src="standard.575ce700.svg" alt="Standard" class="account-icon">
+                        </div>
+                        <h3 class="account-name">STANDARD</h3>
+                        <p class="account-tag">Best for beginners</p>
+                    </div>
+                    <div class="account-card-body">
+                        <div class="account-feature-main">
+                            <div class="feature-value">ZERO</div>
+                            <div class="feature-label">/Commission</div>
+                        </div>
+                        <ul class="account-features-list">
+                            <li>✓ Zero* commission</li>
+                            <li>✓ Spreads from 0.10*</li>
+                            <li>✓ $10 Minimum deposit</li>
+                            <li>✓ Leverage up to 2000</li>
+                        </ul>
+                        <button class="btn-account-register">Register</button>
+                    </div>
+                </div>
+
+                <!-- PRO Account -->
+                <div class="account-card">
+                    <div class="account-card-header">
+                        <div class="account-badge">
+                            <img src="pro.b2b0bcae.svg" alt="Pro" class="account-icon">
+                        </div>
+                        <h3 class="account-name">PRO</h3>
+                        <p class="account-tag">Designed for professional traders</p>
+                    </div>
+                    <div class="account-card-body">
+                        <div class="account-feature-main">
+                            <div class="feature-value blue">ZERO</div>
+                            <div class="feature-label">/Spread</div>
+                        </div>
+                        <ul class="account-features-list">
+                            <li>✓ $8 per lot commission</li>
+                            <li>✓ Zero spreads at 0.0 pips</li>
+                            <li>✓ $200 Minimum deposit</li>
+                            <li>✓ Leverage up to 2000</li>
+                        </ul>
+                        <button class="btn-account-register">Register</button>
+                    </div>
+                </div>
+
+                <!-- PRIME Account -->
+                <div class="account-card prime">
+                    <div class="account-card-header">
+                        <div class="account-badge">
+                            <img src="prime.7aa85143.svg" alt="Prime" class="account-icon">
+                        </div>
+                        <h3 class="account-name">PRIME</h3>
+                        <p class="account-tag">Best for high-volume traders</p>
+                    </div>
+                    <div class="account-card-body">
+                        <div class="account-feature-main">
+                            <div class="feature-value blue">ZERO</div>
+                            <div class="feature-label">/Hassle</div>
+                        </div>
+                        <ul class="account-features-list">
+                            <li>✓ $4 per lot commission</li>
+                            <li>✓ Spreads from 0.03 pips</li>
+                            <li>✓ $200 Minimum deposit</li>
+                            <li>✓ Leverage up to 2000</li>
+                        </ul>
+                        <button class="btn-account-register blue">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2 class="section-title centered">Compare plans<br><span class="highlight-blue">to find the best</span></h2>
+            
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Features</th>
+                            <th>Standard</th>
+                            <th>Pro</th>
+                            <th class="prime-col">Prime</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-name">Available base currencies</td>
+                            <td>USD, EUR, GBP, CHF, JPY, CAD, AUD</td>
+                            <td>USD, EUR, GBP, CHF, JPY, CAD, AUD</td>
+                            <td class="prime-col">USD, EUR, GBP, CHF, JPY, CAD, AUD</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Contract size</td>
+                            <td>1 lot = 100000</td>
+                            <td>1 lot = 100000</td>
+                            <td class="prime-col">1 lot = 100000</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Leverage</td>
+                            <td>Upto 2000</td>
+                            <td>Upto 2000</td>
+                            <td class="prime-col">Upto 2000</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Negative balance protection</td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td class="prime-col"><span class="check-icon">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Spreads</td>
+                            <td>0.10 Pip</td>
+                            <td>0.00 pip</td>
+                            <td class="prime-col">0.03 pip</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Commission</td>
+                            <td><span class="cross-icon">✗</span></td>
+                            <td>8$ per lot</td>
+                            <td class="prime-col">4$ per lot</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Minimum trade size</td>
+                            <td>0.01 lot</td>
+                            <td>0.01 lot</td>
+                            <td class="prime-col">0.01 lot</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Lot restriction per symbol</td>
+                            <td>Upto 500 lots</td>
+                            <td>Upto 500 lots</td>
+                            <td class="prime-col">Upto 500 lots</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Max open position</td>
+                            <td>Infinite</td>
+                            <td>Infinite</td>
+                            <td class="prime-col">Infinite</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Max pending orders</td>
+                            <td>Infinite</td>
+                            <td>Infinite</td>
+                            <td class="prime-col">Infinite</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Hedging</td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td class="prime-col"><span class="check-icon">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Swap-Free options</td>
+                            <td>Free swap upto 3 days*</td>
+                            <td>Free swap upto 3 days*</td>
+                            <td class="prime-col">Free swap upto 3 days*</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Minimum required deposit</td>
+                            <td>10$</td>
+                            <td>200$</td>
+                            <td class="prime-col">200$</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Symbols (Tradable assets)</td>
+                            <td>300+</td>
+                            <td>300+</td>
+                            <td class="prime-col">300+</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Payment options</td>
+                            <td>10+ methods</td>
+                            <td>10+ methods</td>
+                            <td class="prime-col">10+ methods</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button class="btn-register-table">Register</button></td>
+                            <td><button class="btn-register-table">Register</button></td>
+                            <td class="prime-col"><button class="btn-register-table blue">Register</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Please Note Section -->
+    <section class="note-section">
+        <div class="container">
+            <div class="note-box">
+                <div class="note-header">
+                    <span class="note-icon">ⓘ</span>
+                    <h3>Please Note</h3>
+                </div>
+                <ul class="note-list">
+                    <li>Toxic trading on ApexTradePro accounts is not allowed and can lead to account suspension</li>
+                    <li>Leverage in trading accounts may vary depending on market conditions</li>
+                    <li>The stop-out level in the ApexTradePro trading account is 30%. Overpositioning with lower margins may lead to liquidations.</li>
+                </ul>
+            </div>
+
+            <div class="payment-section">
+                <h3 class="payment-title">We accept:</h3>
+                <div class="payment-methods">
+                    <div class="payment-icon">💳</div>
+                    <div class="payment-icon">💳</div>
+                    <div class="payment-icon">💰</div>
+                    <div class="payment-icon">🏦</div>
+                    <div class="payment-icon">💳</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="cta">
+        <div class="support-section">
+            <div class="container">
+                <div class="support-content">
+                    <span class="support-tag">Support</span>
+                    <h2 class="support-title">Got more<br>questions?</h2>
+                    <button class="btn-support">Ask here</button>
+                </div>
+                <div class="support-image">
+                    <img src="[CITYPNG.COM]HD Group Of Bitcoin Coins PNG - 1500x1500.png" alt="Support">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">News</span>
+                <h2 class="section-title">Stay Connected with<br><span class="highlight">ApexTradePro!</span></h2>
+            </div>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="images.jpg" alt="Bitcoin">
+                    </div>
+                    <h3 class="news-title">Shaping the Crypto Revolution: U.S. Policies & the Rise of Bitcoin & Ethereum</h3>
+                    <div class="news-tags">
+                        <span class="news-tag">Crypto</span>
+                        <span class="news-tag">11/3/2025</span>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="Template-1-3.avif" alt="Gold Trading">
+                    </div>
+                    <h3 class="news-title">Gold Trading 2025: Why Prices Hit $2,955 & What's Next</h3>
+                    <div class="news-tags">
+                        <span class="news-tag">Commodities</span>
+                        <span class="news-tag">4/3/2025</span>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="153346333.webp" alt="Forex Trading">
+                    </div>
+                    <h3 class="news-title">Planning to explore New Opportunities in Forex Markets as an Indian trader? Here's how you can get started in 2025!</h3>
+                    <div class="news-tags">
+                        <span class="news-tag">Investing</span>
+                        <span class="news-tag">1/2/2025</span>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-view-more">View more</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">
+                        <img src="Apex logo.png" alt="ApexTradePro" class="logo-img">
+                    </a>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>ACCOUNTS</h4>
+                        <ul>
+                            <li><a href="platforms.html">Platform</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="#">Blogs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>DEPOSIT & WITHDRA...</h4>
+                        <ul>
+                            <li><a href="#">Tools</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                            <li><a href="#">Become a Partner</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>NEWSLETTER</h4>
+                        <p>STAY INFORMED, STAY WITH APEXTRADE!</p>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Your e-mail">
+                            <button>→</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-middle">
+                <div class="footer-middle-left">
+                    <h4>Stay connected with us</h4>
+                    <div class="social-links">
+                        <a href="#">📘</a>
+                        <a href="#">💼</a>
+                        <a href="#">📺</a>
+                        <a href="#">✖️</a>
+                        <a href="#">▶️</a>
+                    </div>
+                </div>
+                <div class="footer-middle-right">
+                    <h4>WE IN SOCIAL</h4>
+                    <div class="app-buttons">
+                        <button class="app-btn">🍎 App Store</button>
+                        <button class="app-btn">▶️ Play Store</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-legal">
+                <div class="legal-section">
+                    <h5>RISK WARNING :</h5>
+                    <p>An investment in derivatives may mean investors may lose an amount even greater than their original investment. Anyone wishing to invest in any of the products mentioned in www.apextradepro.com should seek their own financial or professional advice. Trading of securities, forex, stock market, commodities, options and futures may not be suitable for everyone and involves the risk of losing part or all of your money. Trading in the financial markets has large potential rewards, but also large potential risk. You must be aware of the risks and be willing to accept them in order to invest in the markets. Don't invest and trade with money which you can't afford to lose. Forex Trading are not allowed in some countries, before investing your money, make sure whether your country is allowing this or not. You are strongly advised to obtain independent financial, legal and tax advice before proceeding with any currency or spot metals trade. Nothing in this site should be read or construed as constituting advice on the part of ApexTradePro or any of its affiliates, directors, officers or employees.</p>
+                </div>
+                <div class="legal-section">
+                    <h5>Restricted Regions:</h5>
+                    <p>ApexTradePro does not provide services for citizens/residents of the United States, Cuba, Iraq, Myanmar, North Korea, Sudan, UAE, India. The services of ApexTradePro are not intended for distribution to, or use by, any person in any country or jurisdiction where such distribution or use would be contrary to local law or regulation. Information on this site is not directed at residents in any country or jurisdiction where such distribution or use would be contrary to local law or regulation.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-logo">
+                    <img src="Apex logo.png" alt="ApexTradePro" class="bottom-logo">
+                    <span>© ALL RIGHTS RESERVED</span>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">PRIVACY POLICY</a>
+                    <a href="#">AML</a>
+                    <a href="#">TERMS OF SERVICE</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const navActions = document.querySelector(".nav-actions");
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (isLoggedIn && user) {
+        navActions.innerHTML = `
+            <span style="color:white; margin-right:10px;">
+                Hi, ${user.name} 👋
+            </span>
+            <button onclick="logout()" class="btn-signin">Logout</button>
+        `;
+    }
+
+});
+
+function logout() {
+    localStorage.removeItem("isLoggedIn");
+    alert("Logged out 👋");
+    window.location.href = "index.html";
+}
+</script>
+</body>
+</html>

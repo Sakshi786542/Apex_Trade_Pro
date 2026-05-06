@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+
+<style>
+    :root {
+        --bg-dark: #0d0d0d;
+        --bg-card: #1a1a1a;
+        --primary-blue: #007bff;
+        --dark-blue: #0056b3;
+        --text-primary: #ffffff;
+        --text-secondary: #aaaaaa;
+        --border-color: #333;
+        --blue-glow: rgba(0, 123, 255, 0.5);
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Inter', Arial, sans-serif;
+        background: radial-gradient(circle at top, #111 0%, #0d0d0d 100%);
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* 🔥 Background Glow */
+    body::before {
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background: var(--primary-blue);
+        filter: blur(150px);
+        opacity: 0.2;
+        top: -100px;
+        right: -100px;
+        z-index: 0;
+    }
+
+    .card {
+        position: relative;
+        z-index: 1;
+        background: rgba(26, 26, 26, 0.8);
+        backdrop-filter: blur(10px);
+        padding: 40px;
+        border-radius: 16px;
+        width: 320px;
+        text-align: center;
+        border: 1px solid var(--border-color);
+        box-shadow: 0 0 30px rgba(0, 123, 255, 0.3);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 40px rgba(0, 123, 255, 0.5);
+    }
+
+    .card h2 {
+        margin-bottom: 25px;
+        color: var(--text-primary);
+        font-weight: 600;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+        background: #111;
+        color: var(--text-primary);
+        outline: none;
+        transition: 0.3s;
+    }
+
+    input:focus {
+        border-color: var(--primary-blue);
+        box-shadow: 0 0 8px var(--blue-glow);
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(45deg, #007bff, #0056b3);
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 15px var(--blue-glow);
+    }
+
+    .register-link {
+        margin-top: 15px;
+        color: var(--text-secondary);
+        font-size: 14px;
+    }
+
+    .register-link a {
+        color: var(--primary-blue);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .register-link a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>Login</h2>
+
+    <form id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Enter Email" required>
+        <input type="password" id="loginPassword" placeholder="Enter Password" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p class="register-link">
+        Don't have an account? <a href="register.html">Register</a>
+    </p>
+</div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const email = document.getElementById("loginEmail").value;
+    const password = document.getElementById("loginPassword").value;
+
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+
+    if (storedUser && email === storedUser.email && password === storedUser.password) {
+
+        localStorage.setItem("isLoggedIn", true);
+
+        alert("Login Successful ✅");
+
+        window.location.href = "index.html";
+
+    } else {
+        alert("Invalid credentials ❌");
+    }
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const navActions = document.querySelector(".nav-actions");
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (isLoggedIn && user) {
+        navActions.innerHTML = `
+            <span style="color:white; margin-right:10px;">
+                Hi, ${user.name} 👋
+            </span>
+            <button onclick="logout()" class="btn-signin">Logout</button>
+        `;
+    }
+
+});
+
+function logout() {
+    localStorage.removeItem("isLoggedIn");
+    alert("Logged out 👋");
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
+</html>

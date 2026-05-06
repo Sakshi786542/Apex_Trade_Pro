@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin Calculator - ApexTradePro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="Apex logo.png" alt="ApexTradePro" class="logo-img">
+                </a>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <div class="nav-menu" id="navMenu">
+                    <div class="nav-item dropdown">
+                        <span>Markets</span>
+                        <div class="dropdown-menu dropdown-horizontal">
+                            <a href="forex-cfd.html" class="dropdown-item">Forex</a>
+                            <a href="crypto-cfd.html" class="dropdown-item">Crypto</a>
+                            <a href="indices-cfd.html" class="dropdown-item">Indices</a>
+                            <a href="commodities-cfd.html" class="dropdown-item">Commodities</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <span>Trading</span>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Trading View</a>
+                            <a href="#" class="dropdown-item">Web Trader</a>
+                            <a href="#" class="dropdown-item">Mobile App</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <span>Platforms</span>
+                        <div class="dropdown-menu">
+                            <a href="platforms.html" class="dropdown-item">MT4</a>
+                            <a href="platforms.html" class="dropdown-item">MT5</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <span>Tools</span>
+                        <div class="dropdown-menu">
+                            <a href="economic-calendar.html" class="dropdown-item">Economic Calendar</a>
+                            <a href="margin-calculator.html" class="dropdown-item">Margin Calculator</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <span>Project</span>
+                        <div class="dropdown-menu">
+                            <a href="about-us.html" class="dropdown-item">About us</a>
+                            <a href="contact-us.html" class="dropdown-item">Contact us</a>
+                            <a href="#" class="dropdown-item">Blog</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="partners.html" style="text-decoration: none; color: inherit;"><span>Partners</span></a>
+                    </div>
+                    
+                    <div class="nav-actions">
+                        <button class="btn-signin">Sign in</button>
+                        <button class="btn-register">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Margin Calculator Hero Section -->
+    <section class="calculator-hero">
+        <div class="container">
+            <div class="calculator-hero-content">
+                <h1 class="calculator-hero-title">Margin Calculator</h1>
+                <p class="calculator-hero-subtitle">Stay updated with all the upcoming global events<br>that may influence the market movements and trading strategies.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Form Section -->
+    <section class="calculator-form-section">
+        <div class="container">
+            <div class="calculator-form-wrapper">
+                <form class="calculator-form" id="marginCalculatorForm">
+                    <div class="form-group">
+                        <label for="instrument">Select Instrument *</label>
+                        <select id="instrument" class="form-select" required>
+                            <option value="">Select Instrument</option>
+                            <option value="eurusd">EUR/USD</option>
+                            <option value="gbpusd">GBP/USD</option>
+                            <option value="usdjpy">USD/JPY</option>
+                            <option value="btcusd">BTC/USD</option>
+                            <option value="ethusd">ETH/USD</option>
+                            <option value="xauusd">Gold (XAU/USD)</option>
+                            <option value="us30">US30</option>
+                            <option value="us500">US500</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="currentPrice">Current Price *</label>
+                        <input type="number" id="currentPrice" class="form-input" placeholder="Enter current price" step="0.00001" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="leverage">Select Leverage *</label>
+                        <select id="leverage" class="form-select" required>
+                            <option value="">Select Leverage</option>
+                            <option value="1">1:1</option>
+                            <option value="10">1:10</option>
+                            <option value="25">1:25</option>
+                            <option value="50">1:50</option>
+                            <option value="100">1:100</option>
+                            <option value="200">1:200</option>
+                            <option value="500">1:500</option>
+                            <option value="1000">1:1000</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lotSize">Number of Lots *</label>
+                        <input type="number" id="lotSize" class="form-input" placeholder="Enter number of lots" step="0.01" min="0.01" required>
+                    </div>
+
+                    <button type="submit" class="btn-calculate">Calculate</button>
+                </form>
+
+                <div class="calculator-result" id="calculatorResult" style="display: none;">
+                    <h3 class="result-title">Calculation Results</h3>
+                    <div class="result-items">
+                        <div class="result-item">
+                            <span class="result-label">Required Margin:</span>
+                            <span class="result-value" id="resultMargin">$0.00</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Position Size:</span>
+                            <span class="result-value" id="resultPosition">0</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Pip Value:</span>
+                            <span class="result-value" id="resultPipValue">$0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="calculator-support">
+        <div class="container">
+            <div class="support-card">
+                <div class="support-content">
+                    <span class="support-tag">Support</span>
+                    <h2 class="support-title">Got more<br><span class="highlight">questions?</span></h2>
+                    <a href="contact-us.html" class="btn-support">Ask here</a>
+                </div>
+                <div class="support-coins">
+                    <img src="img/2PsST2r.webp" alt="Coin 1" class="support-coin coin-1">
+                    <img src="img/SMJmtaL.webp" alt="Coin 2" class="support-coin coin-2">
+                    <img src="img/Rp3ZYAD.webp" alt="Coin 3" class="support-coin coin-3">
+                    <img src="img/ca9EwxT.webp" alt="Coin 4" class="support-coin coin-4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">News</span>
+                <h2 class="section-title"><span class="highlight">ApexTradePro!</span></h2>
+            </div>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="images.jpg" alt="Bitcoin">
+                    </div>
+                    <h3 class="news-title">Shaping the Crypto Revolution: U.S. Policies & the Rise of Bitcoin & Ethereum</h3>
+                    <div class="news-tags">
+                        <span class="news-tag">Crypto</span>
+                        <span class="news-tag">11/3/2025</span>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="Template-1-3.avif" alt="Gold Trading">
+                    </div>
+                    <h3 class="news-title">Gold Trading 2025: Why Prices Hit $2,955 & What's Next</h3>
+                    <div class="news-tags">
+                        <span class="news-tag">Commodities</span>
+                        <span class="news-tag">4/3/2025</span>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="153346333.webp" alt="Forex Trading">
+                    </div>
+                    <h3 class="news-title">Planning to explore New Opportunities in Forex Markets as an Indian trader? Here's how you can get started in 2025!</h3>
+                    <div class="news-tags">
+                        <span class="news-tag">Investing</span>
+                        <span class="news-tag">1/2/2025</span>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-view-more">View more</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">
+                        <img src="Apex logo.png" alt="ApexTradePro" class="logo-img">
+                    </a>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>ACCOUNTS</h4>
+                        <ul>
+                            <li><a href="platforms.html">PLATFORM</a></li>
+                            <li><a href="about-us.html">ABOUT US</a></li>
+                            <li><a href="#">BLOGS</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>DEPOSIT & WITHDRA...</h4>
+                        <ul>
+                            <li><a href="#">TOOLS</a></li>
+                            <li><a href="contact-us.html">CONTACT US</a></li>
+                            <li><a href="partners.html">BECOME A PARTNER</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>NEWSLETTER</h4>
+                        <p>STAY INFORMED, STAY WITH APEXTRADE!</p>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Your e-mail">
+                            <button>→</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-middle">
+                <div class="footer-middle-left">
+                    <h4>Stay connected with us</h4>
+                    <div class="social-links">
+                        <a href="#">📘</a>
+                        <a href="#">💼</a>
+                        <a href="#">📺</a>
+                        <a href="#">✖️</a>
+                        <a href="#">▶️</a>
+                    </div>
+                </div>
+                <div class="footer-middle-right">
+                    <h4>WE IN SOCIAL</h4>
+                    <div class="app-buttons">
+                        <button class="app-btn">🍎 App Store</button>
+                        <button class="app-btn">▶️ Play Store</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-legal">
+                <div class="legal-section">
+                    <h5>RISK WARNING :</h5>
+                    <p>An investment in derivatives may mean investors may lose an amount even greater than their original investment. Anyone wishing to invest in any of the products mentioned in www.apextradepro.com should seek their own financial or professional advice. Trading of securities, forex, stock market, commodities, options and futures may not be suitable for everyone and involves the risk of losing part or all of your money. Trading in the financial markets has large potential rewards, but also large potential risk. You must be aware of the risks and be willing to accept them in order to invest in the markets. Don't invest and trade with money which you can't afford to lose. Forex Trading are not allowed in some countries, before investing your money, make sure whether your country is allowing this or not. You are strongly advised to obtain independent financial, legal and tax advice before proceeding with any currency or spot metals trade. Nothing in this site should be read or construed as constituting advice on the part of ApexTradePro or any of its affiliates, directors, officers or employees.</p>
+                </div>
+                <div class="legal-section">
+                    <h5>Restricted Regions:</h5>
+                    <p>ApexTradePro does not provide services for citizens/residents of the United States, Cuba, Iraq, Myanmar, North Korea, Sudan, UAE, India. The services of ApexTradePro are not intended for distribution to, or use by, any person in any country or jurisdiction where such distribution or use would be contrary to local law or regulation. Information on this site is not directed at residents in any country or jurisdiction where such distribution or use would be contrary to local law or regulation.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-logo">
+                    <img src="Apex logo.png" alt="ApexTradePro" class="bottom-logo">
+                    <span>© ALL RIGHTS RESERVED</span>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">PRIVACY POLICY</a>
+                    <a href="#">AML</a>
+                    <a href="#">TERMS OF SERVICE</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Margin Calculator Logic
+        document.getElementById('marginCalculatorForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const instrument = document.getElementById('instrument').value;
+            const currentPrice = parseFloat(document.getElementById('currentPrice').value);
+            const leverage = parseInt(document.getElementById('leverage').value);
+            const lotSize = parseFloat(document.getElementById('lotSize').value);
+            
+            if (!instrument || !currentPrice || !leverage || !lotSize) {
+                alert('Please fill all required fields');
+                return;
+            }
+            
+            // Standard lot size is 100,000 units for forex
+            const contractSize = 100000;
+            const positionSize = contractSize * lotSize;
+            const positionValue = positionSize * currentPrice;
+            const requiredMargin = positionValue / leverage;
+            const pipValue = (contractSize * lotSize) * 0.0001;
+            
+            // Display results
+            document.getElementById('resultMargin').textContent = '$' + requiredMargin.toFixed(2);
+            document.getElementById('resultPosition').textContent = positionSize.toLocaleString();
+            document.getElementById('resultPipValue').textContent = '$' + pipValue.toFixed(2);
+            
+            document.getElementById('calculatorResult').style.display = 'block';
+            
+            // Smooth scroll to results
+            document.getElementById('calculatorResult').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    </script>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const navActions = document.querySelector(".nav-actions");
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (isLoggedIn && user) {
+        navActions.innerHTML = `
+            <span style="color:white; margin-right:10px;">
+                Hi, ${user.name} 👋
+            </span>
+            <button onclick="logout()" class="btn-signin">Logout</button>
+        `;
+    }
+
+});
+
+function logout() {
+    localStorage.removeItem("isLoggedIn");
+    alert("Logged out 👋");
+    window.location.href = "index.html";
+}
+</script>
+</body>
+</html>

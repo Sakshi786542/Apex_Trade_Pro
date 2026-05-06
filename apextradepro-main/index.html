@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApexTradePro - Exceptional Trading Platform</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- 🔥 FIX: REMOVE BLUR -->
+    <style>
+        .navbar {
+            background: #0d0d0d !important;
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        body {
+            margin-top: 80px;
+        }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="container">
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <img src="Apex logo.png" alt="ApexTradePro" class="logo-img">
+            </a>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-menu" id="navMenu">
+                <div class="nav-item dropdown">
+                    <span>Markets</span>
+                    <div class="dropdown-menu dropdown-horizontal">
+                        <a href="forex-cfd.html" class="dropdown-item">Forex CFD</a>
+                        <a href="crypto-cfd.html" class="dropdown-item">Crypto CFD</a>
+                        <a href="indices-cfd.html" class="dropdown-item">Indices CFD</a>
+                        <a href="commodities-cfd.html" class="dropdown-item">Commodities CFD</a>
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <span>Trading</span>
+                    <div class="dropdown-menu">
+                        <a href="accounts.html" class="dropdown-item">Accounts</a>
+                        <a href="#" class="dropdown-item">Deposits and withdrawals</a>
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a href="platforms.html" style="color: inherit; text-decoration: none;">
+                        <span>Platforms</span>
+                    </a>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <span>Tools</span>
+                    <div class="dropdown-menu">
+                        <a href="economic-calendar.html" class="dropdown-item">Economic Calendar</a>
+                        <a href="margin-calculator.html" class="dropdown-item">Margin Calculator</a>
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <span>Project</span>
+                    <div class="dropdown-menu">
+                        <a href="about-us.html" class="dropdown-item">About us</a>
+                        <a href="contact-us.html" class="dropdown-item">Contact us</a>
+                        <a href="#" class="dropdown-item">Blog</a>
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a href="partners.html" style="text-decoration: none; color: inherit;">
+                        <span>Partners</span>
+                    </a>
+                </div>
+                
+                <!-- ✅ FIXED BUTTONS -->
+                <div class="nav-actions">
+                    <a href="login.html" class="btn-signin">Sign in</a>
+                    <a href="register.html" class="btn-register">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section (UNCHANGED) -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Exceptional,<br>
+                <span class="hero-subtitle">Never Ordinary!</span>
+            </h1>
+            <p class="hero-description">
+                Global Trading, Unmatched Benefits - with the Top Leading Retail Broker!
+            </p>
+            
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">live instruments</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-number">Live</div>
+                <div class="stat-label">dedicated support</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-number">Zero</div>
+                <div class="stat-label">Spreads</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-number">Fast. Precise.</div>
+                <div class="stat-label">execution</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ✅ REST OF YOUR CODE REMAINS SAME (no changes needed) -->
+
+<script src="script.js"></script>
+<script>
+const navActions = document.querySelector(".nav-actions");
+const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+if (isLoggedIn) {
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    navActions.innerHTML = `
+        <span style="color:white; margin-right:10px;">Hi, ${user.name} 👋</span>
+        <button onclick="logout()" class="btn-signin">Logout</button>
+    `;
+}
+
+function logout() {
+    localStorage.removeItem("isLoggedIn");
+    alert("Logged out successfully 👋");
+    window.location.reload();
+}
+</script>
+</body>
+</html>

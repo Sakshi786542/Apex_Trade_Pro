@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Economic Calendar - ApexTradePro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+<nav class="navbar">
+    <div class="container">
+        <div class="nav-content">
+
+            <a href="index.html" class="logo">
+                <img src="Apex logo.png" alt="ApexTradePro Logo" class="logo-img">
+            </a>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-menu" id="navMenu">
+
+                <div class="nav-item dropdown">
+                    <span>Markets</span>
+                    <div class="dropdown-menu dropdown-horizontal">
+                        <a href="forex-cfd.html" class="dropdown-item">Forex CFD</a>
+                        <a href="crypto-cfd.html" class="dropdown-item">Crypto CFD</a>
+                        <a href="indices-cfd.html" class="dropdown-item">Indices CFD</a>
+                        <a href="commodities-cfd.html" class="dropdown-item">Commodities CFD</a>
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <span>Trading</span>
+                    <div class="dropdown-menu">
+                        <a href="accounts.html" class="dropdown-item">Accounts</a>
+                        <a href="#" class="dropdown-item">Deposits & Withdrawals</a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <a href="platforms.html">Platforms</a>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <span>Tools</span>
+                    <div class="dropdown-menu">
+                        <a href="economic-calendar.html" class="dropdown-item">Economic Calendar</a>
+                        <a href="margin-calculator.html" class="dropdown-item">Margin Calculator</a>
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <span>Project</span>
+                    <div class="dropdown-menu">
+                        <a href="about-us.html" class="dropdown-item">About Us</a>
+                        <a href="contact-us.html" class="dropdown-item">Contact Us</a>
+                        <a href="#" class="dropdown-item">Blog</a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <a href="partners.html">Partners</a>
+                </div>
+
+                <div class="nav-actions">
+                    <button class="btn-signin" type="button">Sign In</button>
+                    <button class="btn-register" type="button">Register</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!-- ================= HERO SECTION ================= -->
+<section class="economic-calendar-hero">
+    <div class="container">
+        <h1 class="economic-calendar-title">Economic Calendar</h1>
+        <p class="economic-calendar-subtitle">
+            Stay updated with all upcoming global events that may influence
+            market movements and trading strategies.
+        </p>
+    </div>
+</section>
+
+
+<!-- ================= TRADINGVIEW WIDGET ================= -->
+<section class="calendar-widget-section">
+    <div class="container">
+        <div class="calendar-widget-wrapper">
+
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+
+                <script type="text/javascript"
+                        src="https://s3.tradingview.com/external-embedding/embed-widget-events.js"
+                        async>
+                {
+                    "colorTheme"; "dark",
+                    "isTransparent"; false,
+                    "width"; "100%",
+                    "height"; "800",
+                    "locale"; "en",
+                    "importanceFilter"; "-1,0,1",
+                    "countryFilter"; "ar,au,br,ca,cn,fr,de,in,id,it,jp,kr,mx,ru,sa,za,tr,gb,us,eu"
+                }
+                </script>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= SUPPORT SECTION ================= -->
+<section class="cta">
+    <div class="container support-section">
+        <div class="support-content">
+            <span class="support-tag">Support</span>
+            <h2 class="support-title">Got more questions?</h2>
+            <button class="btn-support" type="button">Ask Here</button>
+        </div>
+
+        <div class="support-image">
+            <img src="bitcoin.png" alt="Support Image">
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= NEWS SECTION ================= -->
+<section class="news">
+    <div class="container">
+
+        <div class="section-header">
+            <span class="section-tag">News</span>
+            <h2 class="section-title">
+                Stay Connected with <span class="highlight">ApexTradePro</span>
+            </h2>
+        </div>
+
+        <div class="news-grid">
+
+            <div class="news-card">
+                <img src="images.jpg" alt="Bitcoin News">
+                <h3>Shaping the Crypto Revolution: U.S. Policies & the Rise of Bitcoin & Ethereum</h3>
+                <div class="news-tags">
+                    <span>Crypto</span>
+                    <span>11/03/2025</span>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="Template-1-3.avif" alt="Gold Trading">
+                <h3>Gold Trading 2025: Why Prices Hit $2,955 & What's Next</h3>
+                <div class="news-tags">
+                    <span>Commodities</span>
+                    <span>04/03/2025</span>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="trading.png" alt="Forex Trading">
+                <h3>Exploring New Opportunities in Forex Markets as an Indian Trader in 2025</h3>
+                <div class="news-tags">
+                    <span>Investing</span>
+                    <span>01/02/2025</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="container">
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+                <img src="Apex logo.png" alt="ApexTradePro Logo">
+            </div>
+
+            <div class="footer-columns">
+
+                <div class="footer-column">
+                    <h4>Accounts</h4>
+                    <ul>
+                        <li><a href="platforms.html">Platform</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="#">Blogs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Tools</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="#">Become a Partner</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Newsletter</h4>
+                    <p>Stay informed with ApexTradePro updates</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your e-mail">
+                        <button type="button">→</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 ApexTradePro. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">AML Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<!-- Main JS -->
+<script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const navActions = document.querySelector(".nav-actions");
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (isLoggedIn && user) {
+        navActions.innerHTML = `
+            <span style="color:white; margin-right:10px;">
+                Hi, ${user.name} 👋
+            </span>
+            <button onclick="logout()" class="btn-signin">Logout</button>
+        `;
+    }
+
+});
+
+function logout() {
+    localStorage.removeItem("isLoggedIn");
+    alert("Logged out 👋");
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

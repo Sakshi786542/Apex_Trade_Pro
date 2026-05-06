@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indices Trading - ApexTradePro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="Apex logo.png" alt="ApexTradePro" class="logo-img">
+                </a>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <div class="nav-menu" id="navMenu">
+                    <div class="nav-item dropdown">
+                        <span>Markets</span>
+                        <div class="dropdown-menu dropdown-horizontal">
+                            <a href="forex-cfd.html" class="dropdown-item">Forex CFD</a>
+                            <a href="crypto-cfd.html" class="dropdown-item">Crypto CFD</a>
+                            <a href="indices-cfd.html" class="dropdown-item">Indices CFD</a>
+                            <a href="commodities-cfd.html" class="dropdown-item">Commodities CFD</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <span>Trading</span>
+                        <div class="dropdown-menu">
+                            <a href="accounts.html" class="dropdown-item">Accounts</a>
+                            <a href="#" class="dropdown-item">Deposits and withdrawals</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="platforms.html" style="color: inherit; text-decoration: none;">
+                            <span>Platforms</span>
+                        </a>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <span>Tools</span>
+                        <div class="dropdown-menu">
+                            <a href="economic-calendar.html" class="dropdown-item">Economic Calendar</a>
+                            <a href="margin-calculator.html" class="dropdown-item">Margin Calculator</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <span>Company</span>
+                        <div class="dropdown-menu">
+                            <a href="about-us.html" class="dropdown-item">About us</a>
+                            <a href="contact-us.html" class="dropdown-item">Contact us</a>
+                            <a href="#" class="dropdown-item">Blog</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="partners.html" style="text-decoration: none; color: inherit;"><span>Partners</span></a>
+                    </div>
+                    
+                    <div class="nav-actions">
+                        <button class="btn-signin">Sign in</button>
+                        <button class="btn-register">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Indices Hero Section -->
+    <section class="indices-hero">
+        <div class="indices-hero-globe left-globe">
+            <img src="Screenshot_28-12-2025_164332_www.volnex.com.jpeg" alt="Global Indices">
+        </div>
+        <div class="container">
+            <h1 class="indices-hero-title">Indices</h1>
+            <p class="indices-hero-subtitle">Master the world of global indices with trading conditions<br>tailored to elevate your strategy to success.</p>
+        </div>
+        <div class="indices-hero-globe right-globe">
+            <img src="Screenshot 2025-12-28 164259.png" alt="Global Indices">
+        </div>
+    </section>
+
+    <!-- Indices Features -->
+    <section class="forex-features">
+        <div class="container">
+            <div class="forex-content-grid">
+                <!-- Left Sidebar -->
+                <div class="forex-sidebar">
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">📊</span>
+                        <span>Indices</span>
+                    </div>
+                    <div class="sidebar-title">
+                        <div class="title-green">Trade global indices with</div>
+                        <div class="title-black">low, stable spreads</div>
+                    </div>
+                    <div class="sidebar-menu-item active" data-content="essentials">
+                        <span class="bullet">●</span>
+                        <span class="menu-text">Essentials</span>
+                    </div>
+                    <div class="sidebar-menu-item" data-content="trading-equity">
+                        <span class="menu-text">Trading Equity Indices at<br>ApexTrade</span>
+                    </div>
+                    <div class="sidebar-menu-item" data-content="popular-indices">
+                        <span class="menu-text">Popular Global Indices</span>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="forex-main-content">
+                    <!-- Essentials Content -->
+                    <div class="content-section active" id="essentials">
+                        <h3 class="content-section-title">Swap Operations for Positions</h3>
+                        <p class="content-section-text">Long positions are charged with the interbank rate plus a mark-up, while short positions receive the rate minus a mark-up. Swaps are processed daily at 00:00 (GMT+2, DST may apply), with triple swaps charged from Wednesday to Thursday.</p>
+                        <div class="content-divider"></div>
+                        
+                        <h3 class="content-section-title">CFD Margin Calculation</h3>
+                        <p class="content-section-text">The margin for CFDs is determined as: Lots X Contract Size X Opening Price X Margin Percentage. This method is independent of the leverage in your trading account.</p>
+                        <div class="content-divider"></div>
+                        
+                        <h3 class="content-section-title">Understanding Equity Indices</h3>
+                        <p class="content-section-text">Stock indices, like the S&P 500 or Nikkei 225, measure the value of a group of stocks representing specific markets or economies. Calculated via price or capitalization weighting, they serve as indicators of market performance.</p>
+                    </div>
+
+                    <!-- Trading Equity Content -->
+                    <div class="content-section" id="trading-equity">
+                        <h3 class="content-section-title">Trading Equity Indices at ApexTrade</h3>
+                        <p class="content-section-text">Equity indices reflect sector-specific or national economic trends. Trade indices like Dow Jones (US30) or CAC 40 (FRA40) to diversify and leverage market movements with real-time updates and precise calculations.</p>
+                    </div>
+
+                    <!-- Popular Indices Content -->
+                    <div class="content-section" id="popular-indices">
+                        <h3 class="content-section-title">S&P 500 (US500)</h3>
+                        <p class="content-section-text">Tracks 75% of the U.S. equity market.</p>
+                        <div class="content-divider"></div>
+                        
+                        <h3 class="content-section-title">FTSE 100 (UK100)</h3>
+                        <p class="content-section-text">Covers top companies on the London Stock Exchange.</p>
+                        <div class="content-divider"></div>
+                        
+                        <h3 class="content-section-title">Nikkei 225 (JP225)</h3>
+                        <p class="content-section-text">Represents major companies on the Tokyo Stock Exchange.</p>
+                        <div class="content-divider"></div>
+                        
+                        <h3 class="content-section-title">DAX (GER30)</h3>
+                        <p class="content-section-text">Key blue-chip index of German companies.</p>
+                        <div class="content-divider"></div>
+                        
+                        <h3 class="content-section-title">NASDAQ 100 (US100)</h3>
+                        <p class="content-section-text">Includes top non-financial U.S. tech firms.</p>
+                        <div class="content-divider"></div>
+                        
+                        <h3 class="content-section-title">ASX 200 (Australia200)</h3>
+                        <p class="content-section-text">A market-cap weighted index of Australia's top 200 companies, listed on the Australian Stock Exchange.</p>
+                        <div class="content-divider"></div>
+                        
+                        <h3 class="content-section-title">HSI (HK50)</h3>
+                        <p class="content-section-text">The Hang Seng Index, tracking the performance of the 50 largest companies listed on the Hong Kong Stock Exchange since 1969.</p>
+                        <div class="content-divider"></div>
+                        
+                        <h3 class="content-section-title">DJIA (US30)</h3>
+                        <p class="content-section-text">Represents 30 major US companies, and is one of the oldest and most recognized US indices.</p>
+                        <div class="content-divider"></div>
+                        
+                        <h3 class="content-section-title">CAC 40 (FRA40)</h3>
+                        <p class="content-section-text">France's leading index, tracking the top 40 companies on the Euronext Paris.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Indices Trading Table -->
+    <section class="crypto-table-section">
+        <div class="container">
+            <div class="crypto-table-wrapper">
+                <table class="crypto-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Value</th>
+                            <th>Change</th>
+                            <th>Chg%</th>
+                            <th>Open</th>
+                            <th>High</th>
+                            <th>Low</th>
+                            <th>Prev</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="section-header">
+                            <td colspan="8">US & CANADA</td>
+                        </tr>
+                        <tr>
+                            <td class="crypto-name">
+                                <span class="crypto-icon red">●</span> S&P 500
+                            </td>
+                            <td>6,929.0</td>
+                            <td class="negative">-0.6</td>
+                            <td class="negative">-0.01%</td>
+                            <td>6,929.6</td>
+                            <td>6,945.1</td>
+                            <td>6,920.8</td>
+                            <td>6,929.6</td>
+                        </tr>
+                        <tr>
+                            <td class="crypto-name">
+                                <span class="crypto-icon blue">●</span> US 100
+                            </td>
+                            <td>25,638.0</td>
+                            <td class="negative">-2.5</td>
+                            <td class="negative">-0.01%</td>
+                            <td>25,640.5</td>
+                            <td>25,717.9</td>
+                            <td>25,617.9</td>
+                            <td>25,640.5</td>
+                        </tr>
+                        <tr>
+                            <td class="crypto-name">
+                                <span class="crypto-icon gray">●</span> S&P 500 <span class="status-red">●</span>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="crypto-name">
+                                <span class="crypto-icon cyan">●</span> U.S. Dollar Currency Index
+                            </td>
+                            <td>98.054<sup>15</sup></td>
+                            <td class="positive">0.105</td>
+                            <td class="positive">0.11%</td>
+                            <td>97.915</td>
+                            <td>98.134</td>
+                            <td>97.859</td>
+                            <td>97.949</td>
+                        </tr>
+                        <tr>
+                            <td class="crypto-name">
+                                <span class="crypto-icon blue">●</span> Dow 30
+                            </td>
+                            <td>48,718.3</td>
+                            <td class="positive">11.5</td>
+                            <td class="positive">0.02%</td>
+                            <td>48,706.8</td>
+                            <td>48,784.8</td>
+                            <td>48,582.3</td>
+                            <td>48,706.8</td>
+                        </tr>
+                        
+                        <tr class="section-header">
+                            <td colspan="8">EUROPE</td>
+                        </tr>
+                        <tr>
+                            <td class="crypto-name">
+                                <span class="crypto-icon purple">●</span> Euro Stoxx 50
+                            </td>
+                            <td>5,746.24<sup>3</sup></td>
+                            <td class="negative">-3.04</td>
+                            <td class="negative">-0.05%</td>
+                            <td>5,749.09</td>
+                            <td>5,754.56</td>
+                            <td>5,744.75</td>
+                            <td>5,749.28</td>
+                        </tr>
+                        <tr>
+                            <td class="crypto-name">
+                                <span class="crypto-icon red">●</span> UK 100
+                            </td>
+                            <td>9,881.7</td>
+                            <td class="positive">5.7</td>
+                            <td class="positive">0.06%</td>
+                            <td>9,876.0</td>
+                            <td>9,887.0</td>
+                            <td>9,870.7</td>
+                            <td>9,876.0</td>
+                        </tr>
+                        <tr>
+                            <td class="crypto-name">
+                                <span class="crypto-icon blue">●</span> DAX Index
+                            </td>
+                            <td>24,340.06<sup>45</sup></td>
+                            <td class="positive">56.09</td>
+                            <td class="positive">0.23%</td>
+                            <td>24,297.67</td>
+                            <td>24,362.01</td>
+                            <td>24,257.47</td>
+                            <td>24,283.97</td>
+                        </tr>
+                        <tr>
+                            <td class="crypto-name">
+                                <span class="crypto-icon cyan">●</span> CAC 40 Index
+                            </td>
+                            <td>8,103.580<sup>14</sup></td>
+                            <td class="positive">0.000</td>
+                            <td class="positive">0.00%</td>
+                            <td>8,103.580</td>
+                            <td>8,103.580</td>
+                            <td>8,103.580</td>
+                            <td>8,103.580</td>
+                        </tr>
+                        <tr>
+                            <td class="crypto-name">
+                                <span class="crypto-icon red">●</span> SWISS MARKET INDEX SMI® PRICE
+                            </td>
+                            <td>13,242.80<sup>15</sup></td>
+                            <td class="positive">79.14</td>
+                            <td class="positive">0.60%</td>
+                            <td>13,163.74</td>
+                            <td>13,288.66</td>
+                            <td>13,162.82</td>
+                            <td>13,163.66</td>
+                        </tr>
+                        
+                        <tr class="section-header">
+                            <td colspan="8">ASIA/PACIFIC</td>
+                        </tr>
+                        <tr>
+                            <td class="crypto-name">
+                                <span class="crypto-icon cyan">●</span> Nikkei 225
+                            </td>
+                            <td>50,750.93<sup>12</sup></td>
+                            <td class="positive">342.60</td>
+                            <td class="positive">0.68%</td>
+                            <td>50,527.13</td>
+                            <td>50,941.89</td>
+                            <td>50,527.13</td>
+                            <td>50,407.79</td>
+                        </tr>
+                        <tr>
+                            <td class="crypto-name">
+                                <span class="crypto-icon red">●</span> Hang Seng
+                            </td>
+                            <td>25,818.93<sup>3</sup></td>
+                            <td class="positive">44.79</td>
+                            <td class="positive">0.17%</td>
+                            <td>25,780.09</td>
+                            <td>25,890.87</td>
+                            <td>25,772.87</td>
+                            <td>25,774.14</td>
+                        </tr>
+                        <tr>
+                            <td class="crypto-name">
+                                <span class="crypto-icon gray">●</span> Sensex
+                            </td>
+                            <td>85,041.45<sup>12</sup></td>
+                            <td class="negative">-367.25</td>
+                            <td class="negative">-0.43%</td>
+                            <td>85,225.28</td>
+                            <td>85,378.51</td>
+                            <td>84,597.87</td>
+                            <td>85,408.70</td>
+                        </tr>
+                        <tr>
+                            <td class="crypto-name">
+                                <span class="crypto-icon orange">●</span> S&P BSE 500 INDEX
+                            </td>
+                            <td>37,294.67<sup>12</sup></td>
+                            <td class="negative">-113.40</td>
+                            <td class="negative">-0.30%</td>
+                            <td>37,358.33</td>
+                            <td>37,460.85</td>
+                            <td>37,256.18</td>
+                            <td>37,408.07</td>
+                        </tr>
+                        <tr>
+                            <td class="crypto-name">
+                                <span class="crypto-icon cyan">●</span> Kospi Composite
+                            </td>
+                            <td>4,129.68</td>
+                            <td class="positive">21.06</td>
+                            <td class="positive">0.51%</td>
+                            <td>4,130.37</td>
+                            <td>4,143.14</td>
+                            <td>4,116.53</td>
+                            <td>4,108.62</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="cta">
+        <div class="support-section">
+            <div class="container">
+                <div class="support-content">
+                    <span class="support-tag">Support</span>
+                    <h2 class="support-title">Got more<br>questions?</h2>
+                    <button class="btn-support">Ask here</button>
+                </div>
+                <div class="support-image">
+                    <img src="[CITYPNG.COM]HD Group Of Bitcoin Coins PNG - 1500x1500.png" alt="Support">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">News</span>
+                <h2 class="section-title">Stay Connected with<br><span class="highlight">ApexTradePro!</span></h2>
+            </div>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="images.jpg" alt="Bitcoin">
+                    </div>
+                    <h3 class="news-title">Shaping the Crypto Revolution: U.S. Policies & the Rise of Bitcoin & Ethereum</h3>
+                    <div class="news-tags">
+                        <span class="news-tag">Crypto</span>
+                        <span class="news-tag">11/3/2025</span>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="Template-1-3.avif" alt="Gold Trading">
+                    </div>
+                    <h3 class="news-title">Gold Trading 2025: Why Prices Hit $2,955 & What's Next</h3>
+                    <div class="news-tags">
+                        <span class="news-tag">Commodities</span>
+                        <span class="news-tag">4/3/2025</span>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="153346333.webp" alt="Forex Trading">
+                    </div>
+                    <h3 class="news-title">Planning to explore New Opportunities in Forex Markets as an Indian trader? Here's how you can get started in 2025!</h3>
+                    <div class="news-tags">
+                        <span class="news-tag">Investing</span>
+                        <span class="news-tag">1/2/2025</span>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-view-more">View more</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">
+                        <img src="Apex logo.png" alt="ApexTradePro" class="logo-img">
+                    </a>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>ACCOUNTS</h4>
+                        <ul>
+                            <li><a href="platforms.html">Platform</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="#">Blogs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>DEPOSIT & WITHDRA...</h4>
+                        <ul>
+                            <li><a href="#">Tools</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                            <li><a href="#">Become a Partner</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>NEWSLETTER</h4>
+                        <p>STAY INFORMED, STAY WITH APEXTRADE!</p>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Your e-mail">
+                            <button>→</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-middle">
+                <div class="footer-middle-left">
+                    <h4>Stay connected with us</h4>
+                    <div class="social-links">
+                        <a href="#">📘</a>
+                        <a href="#">💼</a>
+                        <a href="#">📺</a>
+                        <a href="#">✖️</a>
+                        <a href="#">▶️</a>
+                    </div>
+                </div>
+                <div class="footer-middle-right">
+                    <h4>WE IN SOCIAL</h4>
+                    <div class="app-buttons">
+                        <button class="app-btn">🍎 App Store</button>
+                        <button class="app-btn">▶️ Play Store</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-legal">
+                <div class="legal-section">
+                    <h5>RISK WARNING :</h5>
+                    <p>An investment in derivatives may mean investors may lose an amount even greater than their original investment. Anyone wishing to invest in any of the products mentioned in www.apextradepro.com should seek their own financial or professional advice. Trading of securities, forex, stock market, commodities, options and futures may not be suitable for everyone and involves the risk of losing part or all of your money. Trading in the financial markets has large potential rewards, but also large potential risk. You must be aware of the risks and be willing to accept them in order to invest in the markets. Don't invest and trade with money which you can't afford to lose. Forex Trading are not allowed in some countries, before investing your money, make sure whether your country is allowing this or not. You are strongly advised to obtain independent financial, legal and tax advice before proceeding with any currency or spot metals trade. Nothing in this site should be read or construed as constituting advice on the part of ApexTradePro or any of its affiliates, directors, officers or employees.</p>
+                </div>
+                <div class="legal-section">
+                    <h5>Restricted Regions:</h5>
+                    <p>ApexTradePro does not provide services for citizens/residents of the United States, Cuba, Iraq, Myanmar, North Korea, Sudan, UAE, India. The services of ApexTradePro are not intended for distribution to, or use by, any person in any country or jurisdiction where such distribution or use would be contrary to local law or regulation. Information on this site is not directed at residents in any country or jurisdiction where such distribution or use would be contrary to local law or regulation.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-logo">
+                    <img src="Apex logo.png" alt="ApexTradePro" class="bottom-logo">
+                    <span>© ALL RIGHTS RESERVED</span>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">PRIVACY POLICY</a>
+                    <a href="#">AML</a>
+                    <a href="#">TERMS OF SERVICE</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Interactive Menu for Indices Features
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.querySelectorAll('.sidebar-menu-item');
+            const contentSections = document.querySelectorAll('.content-section');
+            
+            function showContent(item) {
+                const contentId = item.getAttribute('data-content');
+                
+                // Remove active class from all menu items
+                menuItems.forEach(mi => mi.classList.remove('active'));
+                
+                // Add active class to clicked item
+                item.classList.add('active');
+                
+                // Hide all content sections
+                contentSections.forEach(section => section.classList.remove('active'));
+                
+                // Show the selected content section
+                const targetSection = document.getElementById(contentId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            }
+            
+            // Add hover event listeners
+            menuItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    showContent(this);
+                });
+                
+                item.addEventListener('click', function() {
+                    showContent(this);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
